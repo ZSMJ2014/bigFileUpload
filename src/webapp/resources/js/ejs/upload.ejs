@@ -1,0 +1,19 @@
+<%for (var i=0, file; i<files.length; i++) {
+    file=files[i];
+%>
+<li class="clearfix file-item upload-file-item">
+    <div class="inline-mask"></div>
+    <div class="ellipsis left overlay-col pf-c1">
+        <%=file.name%>
+    </div>
+    <div class="left overlay-col pf-c2">
+        <em><%=formatFileSize(file.size)%></em>
+    </div>
+    <div class="left ellipsis overlay-col pf-c3">
+        <span class="progressing"></span>
+    </div>
+    <div class="left overlay-col pf-c4">
+        <a class="b-in-blk upload-dialog-bg status-btn status-btn-waiting cancel"></a>
+    </div>
+</li>
+<%}%>

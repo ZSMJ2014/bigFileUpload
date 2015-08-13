@@ -1,0 +1,172 @@
+.upload-dialog{
+    left: auto;
+    top: auto;
+    right: 30px;
+    bottom:0;
+    width: 450px;
+    z-index: 101;
+    background: #fff;
+    box-shadow: 0 0 20px -2px rgba(0,0,0,.5);
+    border: 0;
+}
+.upload-dialog,.upload-dialog a,.upload-dialog a:link,.upload-dialog:visited{
+    font-size: 12px;
+}
+
+.fixed-dialog {
+    position: fixed;
+}
+.relative{
+    position: relative;
+    z-index: 1;
+}
+.upload-dialog-head{
+    background-color: #F9F9F9;
+    background-repeat: repeat-x;
+    zoom: 1;
+    overflow: hidden;
+}
+.border-solid-1{
+    border: 1px solid #6d7a89;
+}
+.upload-dialog-bg{
+    background: url(../image/upload.gif) 0 0 repeat-x
+}
+.upload-dialog-sys-btn,.upload-dialog-sys-btn:link,.upload-dialog-sys-btn:visited{
+    position: relative;
+    z-index: 5;
+    padding: 12px 6px;
+    text-indent: -999em;
+}
+.upload-dialog-sys-btn,.upload-dialog-sys-btn span{
+    display: block;
+}
+.upload-dialog-sys-btn span{
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    font-size: 0;
+    cursor: pointer;
+}
+.upload-dialog-sys-btn-cls,.upload-dialog-sys-btn-cls:link,.upload-dialog-sys-btn-cls:visited{
+    padding-right: 12px;
+}
+.upload-dialog-sys-btn-cls span{
+    background-position: 0 -177px;
+}
+.upload-dialog-sys-btn-min span{
+    background-position: 0 -162px;
+}
+.upload-dialog-sys-btn-max span{
+    background-position: 0 -192px;
+}
+.right{
+    float: right;
+}
+.left{
+    float: left;
+}
+.upload-dialog-h4{
+    position: relative;
+    z-index: 2;
+    font-size: 14px;
+    text-indent: 1em;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+.upload-dialog-h4 strong{
+    margin: 8px 0 0;
+    font-weight: 700;
+    line-height: 20px;
+}
+.upload-dialog .dlg-bd{
+    clear: both;
+    overflow: hidden;
+    border-width: 0 1px 1px;
+    height: 250px;
+}
+.upload-dialog-col{
+    position: relative;
+    overflow: hidden;
+    height: 240px;
+    background-color: #fff;
+}
+.upload-dialog-col ul{
+    margin: 0;
+}
+.file-item{
+    border-bottom: 1px solid #d2d2d2;
+    zoom: 1;
+    position: relative;
+}
+.upload-file-item{
+    cursor: default;
+    padding: 8px 0;
+    border-color: #ebebeb;
+}
+.inline-mask{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    height: 100%;
+    background: #f5f7ff -webkit-gradient(linear,left top,left bottom,color-stop(0,rgba(153,209,255,.8)),color-stop(.5,rgba(132,199,255,.8)),color-stop(1,rgba(108,188,255,.8)));
+    background: #f5f7ff -moz-linear-gradient(top, rgba(153, 209, 255, .8), rgba(132, 199, 255, .8) 50%, rgba(108, 188, 255, .8))
+}
+.upload-dialog .ellipsis{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.pf-c1{
+    width: 30%;
+    text-indent: 8px;
+}
+.pf-c2{
+    width: 23%;
+    text-indent: 1em;
+}
+.pf-c3{
+    width: 24%;
+    text-indent: 5px;
+}
+.pf-c4{
+    width: 10%;
+}
+.pf-c5{
+    width: 13%;
+}
+.overlay-col{
+    position: relative;
+    z-index: 2;
+}
+.state-txt-btn{
+    float: left;
+    display: block;
+    width: 18px;
+    height: 18px;
+    text-indent: -999px;
+    background-position: -22px -180px;
+    -webkit-transform: scale(1);
+}
+.state-txt-btn-complete{
+    background-position: -22px -162px;
+}
+.b-in-blk{
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+}
+.status-btn,.status-btn:link,.status-btn:visited{
+    position: absolute;
+    right: 17px;
+    top: 2px;
+    z-index: 1;
+    width: 16px;
+    height: 16px;
+}
+.status-btn-waiting,.status-btn-waiting:link,.status-btn-waiting:visited{
+    background-position: 0 -269px;
+    cursor: pointer;
+}
