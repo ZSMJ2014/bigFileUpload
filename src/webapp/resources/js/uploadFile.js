@@ -78,39 +78,34 @@ function initialFileUpload(url, createDataSet) {
 
         },
         submit:function(e,data){
-            if($("#datasetId").val()){
-                data.formData={id:$("#datasetId").val()};
-                if (data.objectId)
-                    data.formData.objectId = data.objectId;
-                data.parentId=$("#datasetId").val();
-                data.parentName=$("#uploadFileForm input[name='name']").val();
-                var fileItem = new EJS({url: ctx + "/resources/js/ejs/upload.ejs"}).render(data);
-                data.uploadContext=$(fileItem).data("data",data).addClass("uploading");
-                $("#uploadFiles").append(data.uploadContext);
-                $(".cancel").click(function(e){
-                    e.preventDefault();
-                    var template=$(e.currentTarget).closest('.upload-file-item');
-                    var data=template.data("data")||{};
-                    data.uploadContext = data.uploadContext || template;
-                    if(data.abort){
-                        data.abort();
-                        template.remove();
-                    }
-                    data.sendTime=new Date();
-                    data.sendSize=0;
-                    var uploadings = $("#uploadFiles").find(".uploading");
-                    if (uploadings && uploadings.length > 0) {
+            data.formData={};
+            if (data.objectId)
+                data.formData.objectId = data.objectId;
+            data.parentName=$("#uploadFileForm input[name='name']").val();
+            var fileItem = new EJS({url: ctx + "/resources/js/ejs/upload.ejs"}).render(data);
+            data.uploadContext=$(fileItem).data("data",data).addClass("uploading");
+            $("#uploadFiles").append(data.uploadContext);
+            $(".cancel").click(function(e){
+                e.preventDefault();
+                var template=$(e.currentTarget).closest('.upload-file-item');
+                var data=template.data("data")||{};
+                data.uploadContext = data.uploadContext || template;
+                if(data.abort){
+                    data.abort();
+                    template.remove();
+                }
+                data.sendTime=new Date();
+                data.sendSize=0;
+                var uploadings = $("#uploadFiles").find(".uploading");
+                if (uploadings && uploadings.length > 0) {
 
-                    } else {
-                        $("#uploadHead").html("上传完成");
-                        $("#dialogBody").height("0px");
-                        $(".upload-dialog-sys-btn-min").addClass("upload-dialog-sys-btn-max");
-                        $("#uploadProgressHead").width("0px");
-                    }
-                });
-            }else{
-                return false;
-            }
+                } else {
+                    $("#uploadHead").html("上传完成");
+                    $("#dialogBody").height("0px");
+                    $(".upload-dialog-sys-btn-min").addClass("upload-dialog-sys-btn-max");
+                    $("#uploadProgressHead").width("0px");
+                }
+            });
 
         },
         progress:function(e,data){
