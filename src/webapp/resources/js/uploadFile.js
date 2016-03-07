@@ -24,8 +24,6 @@ function initialFileUpload(url, createDataSet) {
         limitMultiFileUploads: 5,
         maxFileSize: 1000000000,
         maxChunkSize: maxChunkSize,
-        maxRetries: 100,
-        retryTimeout: 500,
         messages: {
             maxFileSize: "文件过大，上传文件大小不能超过50M"
         }

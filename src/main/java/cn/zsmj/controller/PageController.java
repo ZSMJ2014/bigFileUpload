@@ -30,7 +30,7 @@ public class PageController {
     public String index(){
         return "index";
     }
-    @RequestMapping(value = "/upload",method = RequestMethod.POST)
+    @RequestMapping(value = "uploadFile",method = RequestMethod.POST)
     @ResponseBody
     public Map uploadFile(MultipartHttpServletRequest request,HttpServletResponse response) throws IOException {
         List<MultipartFile> files=request.getFiles("myfiles");

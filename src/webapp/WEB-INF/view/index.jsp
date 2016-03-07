@@ -150,7 +150,7 @@
 <script>
     var ctx='${ctx}';
     $(function () {
-        initialFileUpload("${ctx}/upload");
+        initialFileUpload("${ctx}/uploadFile");
         //上传资源
         $("#uploadAll").click(function (e) {
             e.preventDefault();

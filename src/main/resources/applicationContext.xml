@@ -4,11 +4,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:annotation-config />
-    <context:component-scan base-package="cn.zsmj"></context:component-scan>
+    <context:component-scan base-package="cn.zsmj.*">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
     <bean id="datasource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="org.h2.Driver"/>
-        <property name="url" value="jdbc:h2:E:\StudyResource\Workspace\H2/test"/>
+        <property name="url" value="jdbc:h2:d:/usr/local/H2/test"/>
         <property name="username" value="sa"/>
         <property name="password" value=""/>
         <property name="initialSize" value="1"/>
